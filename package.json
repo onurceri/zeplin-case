@@ -2,22 +2,19 @@
   "name": "zeplin-case",
   "version": "1.0.0",
   "description": "Zeplin technical assignment",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon ./server.js localhost 3081",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbachi/nodejs-restapi-mongo.git"
+    "url": "git+https://github.com/onurceri/zeplin-case.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bbachi/nodejs-restapi-mongo/issues"
-  },
-  "homepage": "https://github.com/bbachi/nodejs-restapi-mongo#readme",
+  "homepage": "https://github.com/onurceri/zeplin-case#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
