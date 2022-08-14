@@ -6,7 +6,7 @@ const requestController = require('./controller/request.controller')
 const businessController = require('./controller/business.controller')
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3081;
 
 app.use(bodyParser.json());
 
