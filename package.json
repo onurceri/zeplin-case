@@ -4,8 +4,8 @@
   "description": "Zeplin technical assignment",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./server.js localhost 3081",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./server.js localhost 3081",
+    "test": "mocha -r dotenv/config"
   },
   "repository": {
     "type": "git",
@@ -16,9 +16,13 @@
   "license": "ISC",
   "homepage": "https://github.com/onurceri/zeplin-case#readme",
   "dependencies": {
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mocha": "^10.0.0",
     "mongodb": "^3.6.3",
+    "mongodb-memory-server": "^8.8.0",
     "mongoose": "^5.11.10",
     "pine": "^1.1.1"
   },

@@ -14,6 +14,9 @@ class RequestRepository {
     }
 
     async getRequest(requestId) {
+        if (!requestId){
+            throw new Error("requestId parameter required");
+        }
         const request = await Request.findById({ _id: requestId });
         return request;
     }
