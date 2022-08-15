@@ -1,14 +1,25 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-require('dotenv').config()
+const createError = require("http-errors");
+const bodyParser = require("body-parser");
+require("dotenv").config();
 
-const requestController = require('./controller/request.controller')
-const businessController = require('./controller/business.controller')
+const requestController = require("./controller/request.controller");
+const businessController = require("./controller/business.controller");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3081;
 
 app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  next(createError(404, "The requested page doesnt exist"));
+});
+
+app.use((error, req, res, next) => {
+  res
+    .status(error.status || 500)
+    .send({ status: "Internal server error", message: error.message });
+});
 
 app.listen(port, () => {
     console.log(`Server listening on the port  ${port}`);
